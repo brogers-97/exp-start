@@ -1,0 +1,27 @@
+.homepage {
+    display: flex;
+    flex-direction: row;
+}
+.choose-exp {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.new-exp {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.save-state {
+    border: 1px solid black;
+    width: 45%;
+    margin: 5px;
+}
+.save-title {
+    border-bottom: 1px solid black;
+    padding-left: 4px;
+    padding-bottom: 4px;
+}
