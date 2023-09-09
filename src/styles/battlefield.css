@@ -1,0 +1,34 @@
+.main-battle-div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.boss-img {
+    height: 270px;
+    width: 270px;
+}
+.attack-selection-box {
+    border: 1px solid black;
+    width: 88%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.attack-option-card {
+    margin: 15px;
+    padding: 7px;
+    border: 1px solid black;
+    width: 20%;
+}
+.quit-btn {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}

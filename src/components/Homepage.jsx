@@ -3,17 +3,11 @@ import { useState, useEffect } from 'react'
 import '../styles/homepage.css'
 import axios from 'axios'
 
-export default function Homepage () {
+export default function Homepage ({setGameChar, setGameDeck, setGameBoss,  setGameCharHealth, setGameBossHealth, setSaveName}) {
 
     const [characters, setCharacters] = useState([])
     const [decks, setDecks] = useState([])
     const [saveStates, setSaveStates] = useState([])
-
-    const [gameChar, setGameChar] = useState('')
-    const [gameDeck, setGameDeck] = useState('')
-    const [gameBoss, setGameBoss] = useState('')
-    const [gameCharHealth, setGameCharHealth] = useState()
-    const [gameBossHealth, setGameBossHealth] = useState()
 
 
     //USE EFFECTS
@@ -51,12 +45,15 @@ export default function Homepage () {
     //FUNCTIONS
 
     const handleSaveStateClick = (state) => {
-        const { character, deck, boss, bossHealth, characterHealth } = state
+        const { character, deckId, boss, bossHealth, characterHealth, saveName } = state
+        setSaveName(saveName)
         setGameChar(character)
-        setGameDeck(deck)
+        setGameDeck(deckId)
         setGameBoss(boss)
         setGameBossHealth(bossHealth)
         setGameCharHealth(characterHealth)
+
+        console.log('this is it ' + deckId)
     }
 
 
@@ -66,7 +63,7 @@ export default function Homepage () {
 
     const displayDecks = decks.map((deck, i) => {
         return (
-            <option key={i}>{deck.name}</option>
+            <option key={i}>{deck.deckId}</option>
         )
     })
 
@@ -122,7 +119,7 @@ export default function Homepage () {
                     </select>
                 </div>
 
-                <button>Enter Battle</button>
+                <Link to='/battle'>Enter Battle</Link>
 
             </div>
         </div>

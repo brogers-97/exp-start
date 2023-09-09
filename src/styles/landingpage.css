@@ -1,0 +1,19 @@
+.landingpage-main-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.register-form{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 300px;
+    margin: 7px;
+}
+.register-form input, button {
+    margin: 3px;
+}
+.register-login-div {
+    display: flex;
+    align-items: center;
+}
