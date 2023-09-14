@@ -8,6 +8,7 @@ import Landingpage from './components/Landingpage';
 import Battlefield from './components/Battlefield';
 import Homepage from './components/Homepage';
 import Decks from './components/Decks';
+import Admin from './components/Admin';
 import jwt_decode from 'jwt-decode'
 import './App.css';
 
@@ -84,6 +85,10 @@ function App() {
           <Route
             path='/decks'
             element={<Decks />}
+          />
+          <Route
+            path='/admin'
+            element={<Admin />}
           />
         </Routes>
       </Router>

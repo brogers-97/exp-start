@@ -1,0 +1,17 @@
+.database-search {
+    border: 1px solid black;
+    width: 100%;
+    
+}
+.search-results{
+    border: 1px solid black;
+    width: 100%;
+    
+}
+.main-admin-div{
+    display: flex;
+    flex-direction: row;
+}
+.user-email{
+    color: blue;
+}
